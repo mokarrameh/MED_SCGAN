@@ -1,0 +1,4 @@
+# Store text files with LF line endings in the repository.
+* text=auto
+# Slurm rejects batch scripts with CRLF line endings.
+*.sh text eol=lf

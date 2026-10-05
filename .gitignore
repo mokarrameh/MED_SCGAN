@@ -1,0 +1,23 @@
+# Data, weights and outputs (not distributed with this repository)
+datasets/
+checkpoints/
+results/
+*.pth
+*.pt
+*.ckpt
+
+# Logs (Slurm output files and others)
+*_output.txt
+*.log
+
+# Python and Jupyter caches
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Editor settings
+.vscode/
+.idea/
+
+# Release-preparation notes (local only)
+_release/

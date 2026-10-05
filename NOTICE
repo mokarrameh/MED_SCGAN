@@ -1,0 +1,118 @@
+MED_SCGAN: third-party notices
+==============================
+
+This repository is distributed under the GNU General Public License v3.0
+(see LICENSE). It contains code from the projects listed below. No dataset
+images, trained weights or other third-party data are included.
+
+
+1. PyTorch-CycleGAN
+-------------------
+Source:  https://github.com/ai-tor/PyTorch-CycleGAN
+License: GNU General Public License v3.0 (the LICENSE file of this repository
+         is the LICENSE file of that project)
+
+This repository is a derivative of PyTorch-CycleGAN. Derived files:
+- cycle_train.py, cycle_train_unet.py, style_train.py, style_train_unet.py,
+  spa_train.py: argument parsing, data loading and the structure of the
+  training loop (from the upstream "train" script)
+- cycle_test.py, cycle_test_unet.py, style_test.py, style_test_unet.py,
+  spa_test.py: argument parsing, data loading and test loop
+  (from the upstream "test" script)
+- utils/utils.py: tensor2image, Logger, ReplayBuffer, LambdaLR,
+  weights_init_normal (Logger extended with an epoch timer and a configurable
+  Visdom server)
+- utils/datasets.py: ImageDataset (ImageDatasetPath is a modified copy that
+  also returns the file paths)
+
+
+2. pytorch-CycleGAN-and-pix2pix
+-------------------------------
+Source:  https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix
+License: BSD-style licenses, reproduced below from the LICENSE file of that
+         project
+
+Files containing code adapted from its models/networks.py:
+- models/cyclegan_models.py (generators, discriminators, losses and helper
+  functions)
+- models/style_models.py (init_weights, init_net, define_D,
+  NLayerDiscriminator, GANLoss and the recursive U-Net structure of
+  UnetGenerator and UnetSkipConnectionBlock)
+
+----- LICENSE file of pytorch-CycleGAN-and-pix2pix (verbatim) -----
+
+Copyright (c) 2017, Jun-Yan Zhu and Taesung Park
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+* Redistributions of source code must retain the above copyright notice, this
+  list of conditions and the following disclaimer.
+
+* Redistributions in binary form must reproduce the above copyright notice,
+  this list of conditions and the following disclaimer in the documentation
+  and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+--------------------------- LICENSE FOR pix2pix --------------------------------
+BSD License
+
+For pix2pix software
+Copyright (c) 2016, Phillip Isola and Jun-Yan Zhu
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+* Redistributions of source code must retain the above copyright notice, this
+  list of conditions and the following disclaimer.
+
+* Redistributions in binary form must reproduce the above copyright notice,
+  this list of conditions and the following disclaimer in the documentation
+  and/or other materials provided with the distribution.
+
+----------------------------- LICENSE FOR DCGAN --------------------------------
+BSD License
+
+For dcgan.torch software
+
+Copyright (c) 2015, Facebook, Inc. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+
+Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+
+Neither the name Facebook nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+----- end of LICENSE file of pytorch-CycleGAN-and-pix2pix -----
+
+
+Other code
+----------
+The remaining code (the style-modulated generators, mapping network and AdaIN
+layers in models/style_models.py, the VGG-19 style loss, models/spa_gan.py,
+and the evaluation, timing and data-preparation scripts) was written for this
+project. The StyleGAN components follow Karras et al., "A Style-Based
+Generator Architecture for Generative Adversarial Networks", CVPR 2019.
+models/spa_gan.py is the authors' re-implementation of SPA GAN (Emami et
+al., IEEE Trans. Multimedia, 2021); it is not the official SPA GAN code.
+
+The CUT comparison uses the official CUT code
+(https://github.com/taesungp/contrastive-unpaired-translation), which is not
+included here. measure_cut_inference_time.py imports it at run time.

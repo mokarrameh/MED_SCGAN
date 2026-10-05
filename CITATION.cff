@@ -1,0 +1,60 @@
+cff-version: 1.2.0
+message: >-
+  If you use this code, please cite the article given under preferred-citation.
+  Mokarrameh Einlou and Shiva Moghtaderi contributed equally to this work.
+title: >-
+  MED_SCGAN: code for "Style-Enhanced CycleGAN for Unpaired Image-to-Image
+  Translation: A New Approach to Medical Image Fusion Refinement"
+type: software
+authors:
+  - family-names: Einlou
+    given-names: Mokarrameh
+    affiliation: "Department of Electrical and Computer Engineering, University of Saskatchewan, Saskatoon, SK S7N 5A9, Canada"
+    orcid: "https://orcid.org/0009-0005-5421-2521"
+  - family-names: Moghtaderi
+    given-names: Shiva
+    affiliation: "Department of Electrical and Computer Engineering, University of Saskatchewan, Saskatoon, SK S7N 5A9, Canada"
+    orcid: "https://orcid.org/0000-0002-9000-240X"
+    email: shiva.moghtaderi@usask.ca
+  - family-names: Wahid
+    given-names: Khan A.
+    affiliation: "Department of Electrical and Computer Engineering, University of Saskatchewan, Saskatoon, SK S7N 5A9, Canada"
+    orcid: "https://orcid.org/0000-0003-0125-9789"
+  - family-names: Lukong
+    given-names: Kiven E.
+    affiliation: "Department of Biochemistry, Microbiology and Immunology, University of Saskatchewan, Saskatoon, SK S7N 5E5, Canada"
+repository-code: "https://github.com/mokarrameh/MED_SCGAN"
+license: GPL-3.0
+keywords:
+  - CycleGAN
+  - endoscopic image
+  - image fusion
+  - medical image translation
+  - narrow band imaging
+  - white light imaging
+preferred-citation:
+  type: article
+  title: "Style-Enhanced CycleGAN for Unpaired Image-to-Image Translation: A New Approach to Medical Image Fusion Refinement"
+  authors:
+    - family-names: Einlou
+      given-names: Mokarrameh
+      affiliation: "Department of Electrical and Computer Engineering, University of Saskatchewan, Saskatoon, SK S7N 5A9, Canada"
+      orcid: "https://orcid.org/0009-0005-5421-2521"
+    - family-names: Moghtaderi
+      given-names: Shiva
+      affiliation: "Department of Electrical and Computer Engineering, University of Saskatchewan, Saskatoon, SK S7N 5A9, Canada"
+      orcid: "https://orcid.org/0000-0002-9000-240X"
+      email: shiva.moghtaderi@usask.ca
+    - family-names: Wahid
+      given-names: Khan A.
+      affiliation: "Department of Electrical and Computer Engineering, University of Saskatchewan, Saskatoon, SK S7N 5A9, Canada"
+      orcid: "https://orcid.org/0000-0003-0125-9789"
+    - family-names: Lukong
+      given-names: Kiven E.
+      affiliation: "Department of Biochemistry, Microbiology and Immunology, University of Saskatchewan, Saskatoon, SK S7N 5E5, Canada"
+  journal: "IEEE Access"
+  volume: 14
+  start: 56986
+  end: 57001
+  year: 2026
+  doi: "10.1109/ACCESS.2026.3683591"

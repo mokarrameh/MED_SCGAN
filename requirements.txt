@@ -1,0 +1,14 @@
+# The paper's models were implemented in PyTorch 2.5 with CUDA 12.2 support
+# (Section IV-B). Install the PyTorch 2.5 build for your CUDA version first
+# (https://pytorch.org). The paper does not state the versions of the other
+# packages; the Slurm scripts in plato_scripts/ load Python 3.11.
+torch==2.5.*
+torchvision
+numpy
+Pillow
+visdom
+torch-fidelity
+matplotlib
+# param_count.ipynb
+torchinfo
+jupyter
